@@ -1,0 +1,15 @@
+HTML -  Web design
+CSS - Look & Feel
+JS - Validation
+
+----------------------------------------
+
+HTML Tags:
+Formate tags   - <p><strong><h1><h6>
+Link - <a>
+Form - <table><th><tr><td>  <text><radio><chechbox><select>
+image - <img>
+
+
+
+

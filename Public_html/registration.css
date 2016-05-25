@@ -1,0 +1,175 @@
+*{
+margin :0px;
+padding :0px;
+}
+html,body {
+  font-size: 14px;
+  background-color: #DEE;
+  font-family: Arial, Helvetica, sans-serif;
+  min-width: 1100px
+  
+}
+
+#status{
+	text-align :center;
+	color: #f33;
+}
+span{
+color :#F00;
+}
+    
+h1 {
+margin-left:auto;
+margin-right:auto;
+padding : 25px 0px 10px 0px;
+text-align :center;
+font-size :30px;
+width: 850px;
+height :60px;
+background: linear-gradient(#49a5bf,#ccc,#eee,#bbb,#49a5bf);
+ color: #8AC007;
+ margin-bottom:20px;
+} 
+
+h2 {
+  font-size: 130%;
+  text-align: center;
+}    
+
+hr.style_blur {
+    height: 12px;
+    width: 70%;
+    border: 0;
+    padding-bottom: 15px;
+    box-shadow: inset 0 12px 12px -12px #8AC007;
+}
+    
+fieldset {
+	
+  font-size: 120%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 7px;
+  margin-top: 8px;
+  padding-top: 12px; 
+  padding-bottom: 10px;                                  
+  width: 710px;
+  border: 1px solid #e3e3e3;  
+  background: linear-gradient(#eee,#aaa,#bbb, #ccc,#ddd,#eee,#bbb);
+  border-radius: 5px;
+} 
+    
+legend {
+  background-color: white;
+  padding: 2px 10px 2px 10px;
+  border: 2px  gray;
+  font-family: helvetica;
+  border-radius: 3px;
+  background: linear-gradient(#aaa,#ddd,#eee,#fff);
+  margin-left :15px;
+}
+ 
+#check_list>ul{
+padding-left :35px;
+margin-left:auto;
+margin-right:auto;
+}
+ 
+ul {
+  list-style-type: none;
+  margin-left:25px;
+}
+    
+li {  
+  margin-bottom: 5px;
+  line-height: 150%;
+}    
+
+label {
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  color :black;
+}
+    
+input {
+  font-family: courier;
+  border: 1px solid black;
+  background-color: white;
+}
+    
+.image{
+display :block;
+    width:120px;
+    height:120px;
+    margin-left:20px;
+}
+
+.error{
+  color: red;
+  text-align: center;
+}
+
+.center{
+  margin-left: 35%;
+}
+
+.center_upload{
+  margin-left: 5%;
+}
+
+.button {
+  background :linear-gradient(#aaa, #ddd,#fff,#eee,#bbb);
+  padding: 5px 10px 5px 10px;
+  font-family: helvetica;
+  font-size: 90%;
+  color :green;
+  border: 1px solid black;
+  border-radius: 5px;
+}         
+    
+#button_panel {
+  font-size: 120%;
+  text-align: center;
+  padding: 35px 0px 20px 0px;
+}
+
+#req_text{
+  text-align: right;
+  margin-right: 20px;
+  font-size: 80%;
+  color : blue;
+}
+
+.bottom_bar{
+  background-color: #8AC007 ;
+  background-image: url("bottom_bar.png");
+  z-index: 100; 
+  bottom: 0; 
+  left: 0;
+  width: 100%;
+  height: 90px;
+}
+
+.bottom_bar_text{
+   text-align: center;
+   padding-top:60px;
+}   
+
+#back_home_link{
+  text-align: center;
+}
+#submit{
+background :linear-gradient(rgba(98,125,77,1), rgba(98,125,77,1), rgba(92,119,71,1), rgba(31,59,8,1));
+color:#eef;
+}
+#reset_button{
+background:linear-gradient( rgba(239,197,202,1), rgba(210,75,90,1), rgba(186,39,55,1), rgba(241,142,153,1));
+color:#eef;
+}
+#message_line{
+text-align:center;
+color : red;
+}
+          

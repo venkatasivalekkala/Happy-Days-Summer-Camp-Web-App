@@ -1,0 +1,133 @@
+<body>
+    
+        <h1>Registration Form</h1>
+        
+		<form name="personal_info" 
+        id= "personal_info_form"
+        onsubmit="return validate_form()"
+        action="process_request.php"
+        method="post">
+        
+        <fieldset>
+		<legend>Camp Program</legend>
+          <div id="check_list">
+		  <ul class="center">
+      			<li><input type="checkbox" name="checkbox[]" id="bsc" value="1"/>Basketball Camp  &nbsp; <input type="checkbox" name="checkbox[]" value="2" />Baseball Camp <br></li>
+      			<li><input type="checkbox" name="checkbox[]" value="3" />Physical Training  &nbsp;&nbsp;<input type="checkbox" name="checkbox[]" value="4" />Band Camp<br></li>
+      			<li><input type="checkbox" name="checkbox[]" value="5" />Swimming &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<input type="checkbox" name="checkbox[]" value="6">Nature Discovery</li>
+        		</ul>
+			</div >
+        </fieldset>
+		<div>
+		<fieldset>
+        <legend>Parent Information</legend>
+         
+          <ul>
+            <li><label >First Name&nbsp;&nbsp;&nbsp;</label>
+              <input type="text" name="parent_first_name" id="parent_first_name" size="25" class="required"  value ="$_POST[parent_first_name]" /> <span> * </span> </li>
+            <li><label >Middle Name</label>
+              <input type="text" name="parent_middle_name" id="parent_middle_name" size="25" class="required" value ="$_POST[parent_middle_name]" /></li>                     
+            <li><label >Last Name&nbsp;&nbsp;&nbsp;</label>
+              <input type="text" name="parent_last_name"   id="parent_last_name" size="25" class="required" value ="$_POST[parent_last_name]" /> <span> * </span> </li> 
+            <li>
+              <label >Relationship to Child<span> * </span> &nbsp; </label>
+				
+               <input type="radio" name="relationship" value="father" > Father
+	 						<input type="radio" name="relationship" value="mother"> Mother
+	 						<input type="radio" name="relationship" value="guardian"> Guardian
+            </li>
+            <li><label >Address 1</label>
+              <input type="text" name="parent_address" id="parent_address" size="55" class="required" value = "$_POST[parent_address]"/> <span> * </span> </li>
+			<li><label >Address 2 (optional) </label>
+              <input type="text" name="parent_address2"  size="55" class="required" value = "$_POST[parent_address2]"/> </li>
+              <li><label >City</label>
+                <input type="text" name="parent_city"  id="parent_city" size="25" class="required" value = "$_POST[parent_city]"/>
+                <label >State</label>
+                
+                  <input type="text" name="parent_state" id="parent_state" size="3"  value = "$_POST[parent_state]" > <span> * </span>                       
+                <label >Zipcode</label>
+                <input type="text" name="parent_zip"  id="parent_zip" size="5" maxlength="5" class="required" value = "$_POST[parent_zip]"/> <span> * </span>
+              </li>      
+              <li><label >Home Phone</label>
+                (<input type="text" name="parent_home_phone" id="parent_home_phone" size="3" maxlength="3" class="required" value = "$_POST[parent_home_phone]"/>)  &nbsp;&nbsp;
+                <input type="text" name="parent_home_prefix_phone" id="parent_home_prefix_phone" size="3" maxlength="3" class="required" value = "$_POST[parent_home_prefix_phone]"/> &nbsp;-&nbsp;
+                <input type="text" name="parent_h_phone" id="parent_h_phone" size="4" maxlength="4" class="required"  value = "$_POST[parent_h_phone]" /> <span> * </span> </li> 
+              <li><label >Cell Phone</label>
+                (<input type="text" name="parent_cell_phone" size="3" maxlength="3" class="required" value = "$_POST[parent_cell_phone]" />)  &nbsp;&nbsp;
+                <input type="text" name="parent_cell_prefix_phone" size="3" maxlength="3" class="required" value = "$_POST[parent_cell_prefix_phone]" /> &nbsp;-&nbsp;
+                <input type="text" name="parent_c_phone" size="4" maxlength="4" class="required" value = "$_POST[parent_c_phone]" /></li> 
+              <li><label >Email</label>
+                <input type="text" name="parent_email" id="parent_email" size="25" class="required" value = "$_POST[parent_email]" /> <span> * </span> </li>
+            </ul>
+          
+		</fieldset>
+		</div>
+
+		<fieldset>
+		<legend>Child Information</legend>
+
+		<div>
+            <ul>
+              <li><label >First Name&nbsp;&nbsp;&nbsp;</label>
+                <input type="text" name="child_first_name" id="child_first_name" size='25' class="required" value = "$_POST[child_first_name]" /> <span> * </span> </li>
+              <li><label >Middle Name</label>
+              <input type="text" name="child_middle_name" id="child_middle_name" size="25" class="required" value = "$_POST[child_middle_name]" /></li>   
+              <li><label >Last Name&nbsp;&nbsp;&nbsp;</label>
+                <input type="text" name="child_last_name"  id="child_last_name" size="25" class="required" value = "$_POST[child_last_name]" /> <span> * </span> </li> 
+              <li><label >Name that your child goes by</label>
+                <input type="text" name="child_nick_name" id="child_nick_name" size="25"  value = "$_POST[child_nick_name]" /></li> 
+              <li><label >Gender<span> * </span> &nbsp;</label>
+			  
+                  <input type="radio" name="gender" value="M" /> Male&nbsp;
+                  <input type="radio" name="gender" value="F" /> Female
+                </li>
+                 
+               
+              <li><label>Date of Birth: </label>
+			  <input type="text" name="dd" placeholder="dd" id="dd" size="3" maxlength="2"  value = "$_POST[dd]" > /
+							<input type="text" name="mm" placeholder="mm" id="mm" size="3" maxlength="2"  value = "$_POST[mm]"  > /
+							<input type="text" name="yyyy" placeholder="yyyy" id="yyyy" size="5" maxlength="4"  value = "$_POST[yyyy]"   >
+			  <span> * </span> </li>
+              <li><div class="center_upload">
+			  <img src="profile.jpg" alt="child img" name="profile_pic" class="image" >
+              <label>Add an image of your child</label>
+              </div>
+              <input class="center_upload" type="file" id="profile_image"  ></li>
+             
+              <li><label >List any medical conditions and allergies that your child may have:</label><br>
+                <textarea rows="4" cols="50"   name="medical" form="personal_info_form"  value = "$_POST[medical]" > </textarea></li>       
+              <li><label >List any special dietary requirements your child may need:</label><br>
+                <textarea rows="4" cols="50"   name="diet" form="personal_info_form"  value = "$_POST[diet]" > </textarea></li>
+            </ul>
+			</div>
+          </fieldset>
+		  
+	
+		  <fieldset>
+		<legend>Emergency Information</legend>
+
+		 <div>
+            <ul>
+              <li><label >First Name</label>
+                <input type="text" name="emergency_first_name" id="emergency_first_name" size="25" class="required" value = "$_POST[emergency_first_name]" /> <span> * </span> </li>                    
+              <li><label >Last Name</label>
+                <input type="text" name="emergency_last_name"  id="emergency_last_name" size="25" class="required"  value = "$_POST[emergency_last_name]" /> <span> * </span> </li> 
+              <li><label >Phone</label>
+                (<input type="text" name="emergency_phone" id="emergency_phone" size="3" maxlength="3" class="required"  value = "$_POST[emergency_phone]"/>)  &nbsp;&nbsp;
+                <input type="text" name="emergency_prefix_phone" id="emergency_prefix_phone" size="3" maxlength="3" class="required"  value = "$_POST[emergency_prefix_phone]" /> &nbsp;-&nbsp;
+                <input type="text" name="phone_emergency" id="phone_emergency" size="4" maxlength="4" class="required"  value = "$_POST[phone_emergency]" /></li> 
+            </ul>
+            <p id="req_text">*Required fields</p>
+			
+          </div>
+		  </fieldset>
+        
+		<div id="message_line">&nbsp;</div>
+        <div id="button_panel">  
+            <input type="reset" value="Clear Data" class="button"  id="reset_button"/>
+            <input type="submit" value="Submit Data" id="submit" class="button" /> 
+			<a href="index.html"><p id="su" ><br/>Home<br/></p></a>
+        </div>
+		 
+		
+        </form>
